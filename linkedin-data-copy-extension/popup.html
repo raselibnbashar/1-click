@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Profile Extractor</title>
+  </head>
+  <style>
+
+
+    #email {
+      color: white;
+      background-color: #87264b;
+      border-radius: 8px;
+      padding: 4px 8px;
+      margin-top: 10px;
+    }
+
+    .btn-success {
+      width: 100%;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      user-select: none;
+      background-color: #006B55;
+      border: 1px solid #006B55;
+      padding: 2rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 8PX;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-success:hover {
+      background-color: #328876;
+      border-color: #328876;
+    }
+
+    .btn-success:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+
+    .btn-success:active {
+      background-color: #328876;
+      border-color: #328876;
+    }
+    body{
+      width: 350px;
+    }
+
+    .verTagStyle{
+      text-align: right;
+      margin: 0px;
+      padding: 0px;
+      font-weight: 700;
+      font-size: medium;
+      color: #006B55;
+    }
+  </style>
+  <body>
+
+    <button id="copyText" class="btn-success">
+      Copy JSON
+    </button>
+
+    <p id="email"></p>
+    <p class="verTagStyle">Version: 1.0.3</p>
+
+
+    <span id="resultData" style="font-weight: bold; color: green"></span><br />
+    <span style="font-weight: bold; color: #006B55">Built by:</span><br />
+    <span style="font-weight: bold; color: #000">Rasel Ibn Bashar (+8801721404101)</span>
+
+
+    <script src="popup.js"></script>
+  </body>
+</html>
