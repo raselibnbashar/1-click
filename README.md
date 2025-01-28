@@ -1,2 +1,2 @@
 # 1-click
-Here are two Google Chrome Extension, for help Bdjobs Data Entry Executives work. This extension LinkedIn talent pool applicants data easily copy and paste in Bdjobs CRM.
+Here are two Google Chrome extensions to help Bdjobs Data Entry Executives. These extensions allow them to easily copy and paste LinkedIn talent pool applicant data into the Bdjobs CRM.
