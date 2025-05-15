@@ -1,108 +1,107 @@
-
 const site = window.location.href;
 
 // LinkedIn Applicant JobSeeker Identity Information Function: Start
 if (site.includes("https://ln.bdjobs.com/linkedinApplication/jobListLn.asp?")) {
 
-  function addInputToModalFooter() {
+    function addInputToModalFooter() {
 
 
-// Select the logout div element
-const logoutDiv = document.querySelector(".logout");
-logoutDiv.style.backgroundColor = "#87264b";
+        // Select the logout div element
+        const logoutDiv = document.querySelector(".logout");
+        logoutDiv.style.backgroundColor = "#87264b";
 
-// Select the name div element
-const nameDiv = document.querySelector(".name");
+        // Select the name div element
+        const nameDiv = document.querySelector(".name");
 
-// Get the current text content
-let text = nameDiv.textContent;
+        // Get the current text content
+        let text = nameDiv.textContent;
 
-// Capitalize the first letter
-let capitalizedText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+        // Capitalize the first letter
+        let capitalizedText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 
-// Update the div's text content
-nameDiv.textContent = capitalizedText;
-
-
-const panelDiv = document.querySelector(".panel");
-    const panelHeadingDiv = document.querySelector(".panel-heading");
-    panelHeadingDiv.style.backgroundColor = "#87264b";
-
-    // Change the border color
-    panelDiv.style.borderColor = "#87264b"; 
-panelHeadingDiv.style.borderColor = "#87264b"; 
+        // Update the div's text content
+        nameDiv.textContent = capitalizedText;
 
 
-    const modalContent = document.querySelector(".modal-content");
+        const panelDiv = document.querySelector(".panel");
+        const panelHeadingDiv = document.querySelector(".panel-heading");
+        panelHeadingDiv.style.backgroundColor = "#87264b";
 
-    if (modalContent) {
-        // Change the display style to 'block'
-        modalContent.style.backgroundColor = "#87264b";
-        modalContent.style.color = "#ffffff";
-        
+        // Change the border color
+        panelDiv.style.borderColor = "#87264b";
+        panelHeadingDiv.style.borderColor = "#87264b";
 
 
+        const modalContent = document.querySelector(".modal-content");
+
+        if (modalContent) {
+            // Change the display style to 'block'
+            modalContent.style.backgroundColor = "#87264b";
+            modalContent.style.color = "#ffffff";
+
+
+
+        }
+
+
+        const modalErrorMsg = document.getElementById("modalErrorMsg");
+
+
+        // Example: Modify the style
+        modalErrorMsg.style.color = "red";
+        modalErrorMsg.style.padding = "5px";
+        modalErrorMsg.style.borderRadius = "6px";
+        modalErrorMsg.style.backgroundColor = "#fff";
+
+
+
+
+        // Create the input element
+        var newInput = document.createElement("textarea");
+        newInput.type = "text";
+        newInput.id = "dataPass";
+        newInput.name = "dataPass";
+        newInput.placeholder = "JSON Paste Here";
+
+        // Add inline styles
+        newInput.style.marginTop = "10px";
+        newInput.style.marginBottom = "10px";
+        newInput.style.padding = "5px";
+        newInput.style.width = "100%";
+        newInput.style.borderRadius = "5px";
+        newInput.style.border = "1px solid #ccc";
+        newInput.style.height = "150px";
+        newInput.style.color = "#000";
+
+        // Get the div that contains the buttons
+        var buttonDiv = document.querySelector(".modal-footer > div");
+
+
+
+        const modalFooter = document.querySelector(".modal-footer");
+
+        if (modalFooter) {
+            // Change the display style to 'block'
+            modalFooter.style.display = "block";
+        }
+
+
+
+
+        // Close button hidden
+        document.querySelector(".modal-footer > div > button:nth-child(1)").style.display = "none";
+        document.querySelector(".modal-footer > div > button:nth-child(2)").style.display = "block";
+        document.querySelector(".modal-footer > div > button:nth-child(2)").style.width = "100%";
+        document.querySelector(".modal-footer > div > button:nth-child(2)").style.marginLeft = "0";
+        document.querySelector(".modal-footer > div > button:nth-child(2)").style.backgroundColor = "#006B55";
+        document.querySelector(".modal-footer > div > button:nth-child(2)").style.padding = "4rem";
+
+        // Insert the new input before the buttons
+        buttonDiv.insertBefore(newInput, buttonDiv.lastChild);
     }
 
-
-    const modalErrorMsg = document.getElementById("modalErrorMsg");
-
-
-// Example: Modify the style
-modalErrorMsg.style.color = "red";
-modalErrorMsg.style.padding = "5px";
-modalErrorMsg.style.borderRadius = "6px";
-modalErrorMsg.style.backgroundColor = "#fff";
-
-
-
-
-    // Create the input element
-    var newInput = document.createElement("textarea");
-    newInput.type = "text";
-    newInput.id = "dataPass";
-    newInput.name = "dataPass";
-    newInput.placeholder = "JSON Paste Here";
-
-    // Add inline styles
-    newInput.style.marginTop = "10px";
-    newInput.style.marginBottom = "10px";
-    newInput.style.padding = "5px";
-    newInput.style.width = "100%";
-    newInput.style.borderRadius = "5px";
-    newInput.style.border = "1px solid #ccc";
-    newInput.style.height = "150px";
-    newInput.style.color = "#000";
-
-    // Get the div that contains the buttons
-    var buttonDiv = document.querySelector(".modal-footer > div");
-
-
-
-    const modalFooter = document.querySelector(".modal-footer");
-
-    if (modalFooter) {
-        // Change the display style to 'block'
-        modalFooter.style.display = "block";
-    }
-
-
-  
-
-    // Close button hidden
-    document.querySelector(".modal-footer > div > button:nth-child(1)").style.display = "none";
-    document.querySelector(".modal-footer > div > button:nth-child(2)").style.display = "block";
-    document.querySelector(".modal-footer > div > button:nth-child(2)").style.width = "100%";
-    document.querySelector(".modal-footer > div > button:nth-child(2)").style.marginLeft = "0";
-    document.querySelector(".modal-footer > div > button:nth-child(2)").style.backgroundColor = "#006B55";
-    document.querySelector(".modal-footer > div > button:nth-child(2)").style.padding = "4rem";
-
-    // Insert the new input before the buttons
-    buttonDiv.insertBefore(newInput, buttonDiv.lastChild);
-}
-
-// Call the function to add the input field
-addInputToModalFooter();
+    // Call the function to add the input field
+    addInputToModalFooter();
 
 
 
@@ -114,86 +113,86 @@ addInputToModalFooter();
 // LinkedIn ApplicantList From Function: Start
 if (site.includes("https://ln.bdjobs.com/linkedinApplication/createApplicant.asp?")) {
 
-  // Function to add a new input group dynamically
-  function addInputGroup() {
+    // Function to add a new input group dynamically
+    function addInputGroup() {
 
-    // Select the logout div element
-    const pageHeaderDiv = document.querySelector(".page-header");
+        // Select the logout div element
+        const pageHeaderDiv = document.querySelector(".page-header");
 
-    pageHeaderDiv.style.margin = "10px";
+        pageHeaderDiv.style.margin = "10px";
 
-    const logoutDiv = document.querySelector(".logout");
-    logoutDiv.style.backgroundColor = "#87264b";
+        const logoutDiv = document.querySelector(".logout");
+        logoutDiv.style.backgroundColor = "#87264b";
 
-    const panelDiv = document.querySelector(".panel");
-    const panelHeadingDiv = document.querySelector(".panel-heading");
-    panelHeadingDiv.style.backgroundColor = "#87264b";
+        const panelDiv = document.querySelector(".panel");
+        const panelHeadingDiv = document.querySelector(".panel-heading");
+        panelHeadingDiv.style.backgroundColor = "#87264b";
 
-    // Change the border color
-    panelDiv.style.borderColor = "#87264b"; 
-panelHeadingDiv.style.borderColor = "#87264b"; 
+        // Change the border color
+        panelDiv.style.borderColor = "#87264b";
+        panelHeadingDiv.style.borderColor = "#87264b";
 
-    // Select the name div element
-    const nameDiv = document.querySelector(".name");
+        // Select the name div element
+        const nameDiv = document.querySelector(".name");
 
-    // Get the current text content
-    let text = nameDiv.textContent;
+        // Get the current text content
+        let text = nameDiv.textContent;
 
-    // Capitalize the first letter
-    let capitalizedText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+        // Capitalize the first letter
+        let capitalizedText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 
-    // Update the div's text content
-    nameDiv.textContent = capitalizedText;
-
-
-    // Select all label elements within the form
-const labels = document.querySelectorAll("#createApplicant label");
-
-// Iterate through the labels and hide each one
-// labels.forEach(label => {
-//     label.style.display = "none";
-// });
+        // Update the div's text content
+        nameDiv.textContent = capitalizedText;
 
 
+        // Select all label elements within the form
+        const labels = document.querySelectorAll("#createApplicant label");
 
-      // Create a new div element with the class "input-group"
-      var newDiv = document.createElement("div");
-      newDiv.className = "input-group";
+        // Iterate through the labels and hide each one
+        // labels.forEach(label => {
+        //     label.style.display = "none";
+        // });
 
-      // Create a label element
-      var newLabel = document.createElement("label");
-      newLabel.setAttribute("for", "dataPass");
-      newLabel.innerText = "Data Pass";
 
-      // Create an input element
-      var newInput = document.createElement("textarea");
-      newInput.type = "text";
-      newInput.id = "dataPass";
-      newInput.name = "dataPass";
-      newInput.style.height = "100px";
 
-      const button = document.querySelector("button[type='button']");
-      button.style.height = "100px";
-      button.style.backgroundColor = "#006B55";
-      button.style.color = "#fff";
+        // Create a new div element with the class "input-group"
+        var newDiv = document.createElement("div");
+        newDiv.className = "input-group";
 
-      // Append the label and input to the div
-      newDiv.appendChild(newLabel);
-      newDiv.appendChild(newInput);
+        // Create a label element
+        var newLabel = document.createElement("label");
+        newLabel.setAttribute("for", "dataPass");
+        newLabel.innerText = "Data Pass";
 
-      // Append the new div to the form
-      var form = document.getElementById("createApplicant");
-      form.insertBefore(newDiv, form.querySelector('.input-group[style]')); // Insert before the button div
-  }
+        // Create an input element
+        var newInput = document.createElement("textarea");
+        newInput.type = "text";
+        newInput.id = "dataPass";
+        newInput.name = "dataPass";
+        newInput.style.height = "100px";
 
-  // Call the function to add the new input group
-  addInputGroup();
+        const button = document.querySelector("button[type='button']");
+        button.style.height = "100px";
+        button.style.backgroundColor = "#006B55";
+        button.style.color = "#fff";
+
+        // Append the label and input to the div
+        newDiv.appendChild(newLabel);
+        newDiv.appendChild(newInput);
+
+        // Append the new div to the form
+        var form = document.getElementById("createApplicant");
+        form.insertBefore(newDiv, form.querySelector('.input-group[style]')); // Insert before the button div
+    }
+
+    // Call the function to add the new input group
+    addInputGroup();
 
 }
 // LinkedIn ApplicantList From Function: End
 
 // Data Pass Function: Start
-document.getElementById("dataPass").addEventListener("click", async function() {
+document.getElementById("dataPass").addEventListener("click", async function () {
     try {
         const clipboardText = await navigator.clipboard.readText();
         this.value = clipboardText;
@@ -202,15 +201,15 @@ document.getElementById("dataPass").addEventListener("click", async function() {
 
         // LinkedIn Applicant JobSeeker Identity Information Function: Start
         if (site.includes("https://ln.bdjobs.com/linkedinApplication/jobListLn.asp?")) {
-                      let emailAdd = document.querySelector('input[name="contact_email"]');
-                      let mobileNumber = document.querySelector('input[name="contact_phone"]');
+            let emailAdd = document.querySelector('input[name="contact_email"]');
+            let mobileNumber = document.querySelector('input[name="contact_phone"]');
 
-                      if (emailAdd && mobileNumber) {
-                          emailAdd.value = dataVal.email;
-                          mobileNumber.value = dataVal.mobile;
-                      }
-          }
-          // LinkedIn Applicant JobSeeker Identity Information Function: End
+            if (emailAdd && mobileNumber) {
+                emailAdd.value = dataVal.email;
+                mobileNumber.value = dataVal.mobile;
+            }
+        }
+        // LinkedIn Applicant JobSeeker Identity Information Function: End
 
         // LinkedIn ApplicantList From Function: Start
         if (site.includes("https://ln.bdjobs.com/linkedinApplication/createApplicant.asp?")) {
@@ -235,10 +234,10 @@ document.getElementById("dataPass").addEventListener("click", async function() {
             salaryValue.value = dataVal.salary;
             lnprofile.value = dataVal.profileUrl;
 
-            if(genderVal === 'Male' || genderVal === ''){
-              gender.value = "Male";
-            }else {
-              gender.value = "Female";
+            if (genderVal === 'Male' || genderVal === '') {
+                gender.value = "Male";
+            } else {
+                gender.value = "Female";
             }
 
 
@@ -246,6 +245,15 @@ document.getElementById("dataPass").addEventListener("click", async function() {
 
 
             let ageInput = document.querySelector('input[name="age"]'); // Get the input element
+
+            // if (fName && fName.value === "") {
+            //     fName.value = dataVal.first_name;
+            // }
+
+            // if (lName && lName.value === "") {
+            //     lName.value = dataVal.last_name;
+            // }
+
 
             if (ageInput.value === "") {
                 ageInput.value = dataVal.age; // Set default age if empty
@@ -260,14 +268,10 @@ document.getElementById("dataPass").addEventListener("click", async function() {
 
 
 
-          }
+        }
         // LinkedIn ApplicantList From Function: End
     } catch (err) {
         console.error('Failed to read clipboard contents: ', err);
     }
 });
 // Data Pass Function: End
-
-
-
-
