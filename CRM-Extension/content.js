@@ -226,8 +226,8 @@ document.getElementById("dataPass").addEventListener("click", async function () 
             let genderVal = document.querySelector("input[name='gender']").value;
 
 
-            fName.value = dataVal.first_name;
-            lName.value = dataVal.last_name;
+            //fName.value = dataVal.first_name;
+            //lName.value = dataVal.last_name;
             mobile.value = dataVal.mobile;
             email.value = dataVal.email;
 
@@ -246,13 +246,13 @@ document.getElementById("dataPass").addEventListener("click", async function () 
 
             let ageInput = document.querySelector('input[name="age"]'); // Get the input element
 
-            // if (fName && fName.value === "") {
-            //     fName.value = dataVal.first_name;
-            // }
+             if (fName && fName.value === "") {
+                 fName.value = dataVal.first_name;
+             }
 
-            // if (lName && lName.value === "") {
-            //     lName.value = dataVal.last_name;
-            // }
+             if (lName && lName.value === "") {
+                 lName.value = dataVal.last_name;
+             }
 
 
             if (ageInput.value === "") {
