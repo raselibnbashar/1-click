@@ -1,17 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Copy JSON Script From LinkedIn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extracts LinkedIn Data",
   "permissions": ["activeTab", "scripting", "downloads"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
-      "32": "icon32.png",
-      "48": "icon48.png",
+      "32": "icon24.png",
+      "48": "icon32.png",
       "64": "icon64.png",
-      "80": "icon80.png",
       "128": "icon128.png"
     }
   },
