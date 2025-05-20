@@ -207,6 +207,7 @@ function getData() {
       ['+41', 'Switzerland'],
       ['+971', 'United Arab Emirates'],
       ['+40', 'Romania'],
+      ['+968', 'Oman'],
       ['+39', 'Italy'],
       ['+36', 'Hungary'],
       ['+34', 'Spain'],
